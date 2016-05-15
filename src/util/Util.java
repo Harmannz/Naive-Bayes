@@ -62,16 +62,23 @@ public class Util {
 	}
     
     /**
-     * 
-     * @param desiredClassLabel
-     * @param calculatedClassLabel
+     * Emphasises a message in console.
+     * @param message
      */
-    public static void printError(int desiredClassLabel, int calculatedClassLabel) {
-    	String message = "Desired:"+ getClassString(desiredClassLabel) + ", Calculated: " + getClassString(calculatedClassLabel);
+    public static void emphasise(String message) {
+    	printHash(message);
         System.out.println("# " + message + " #");
+        printHash(message);
     }
     
     public static String getClassString(int classLabel) {
         return (classLabel == SPAM ? "SPAM" : "NOT SPAM");
+    }
+
+    private static void printHash(String message) {
+        for (int i = 0; i < message.length() + 4; i++) {
+            System.out.print("#");
+        }
+        System.out.print("\n");
     }
 }

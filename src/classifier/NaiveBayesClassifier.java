@@ -82,7 +82,7 @@ public class NaiveBayesClassifier {
 				value[instance.getClassLabel()] += 1;
 			}
 		}
-		
+		Util.emphasise("Occurrence Table");
 		for(Map.Entry<Integer, int[]> entry : occurrenceTable.entrySet()){
 			System.out.println(entry.getKey() + ": " + Arrays.toString(entry.getValue()));
 		}
@@ -114,11 +114,12 @@ public class NaiveBayesClassifier {
 		probabilityClass0 = ((double)(class0+1))/(class0+class1+2);
 		probabilityClass1 = ((double)(class1+1))/(class0+class1+2);
 		//print statements for test
+		Util.emphasise("Naive Bayes Probability Table");
 		for(Map.Entry<Integer, double[]> entry : probabilityTable.entrySet()){
 			System.out.println(entry.getKey() + ": " + Arrays.toString(entry.getValue()));
 		}
-		System.out.println(probabilityClass0);
-		System.out.println(probabilityClass1);
+		System.out.println("P(ClassA): " + probabilityClass0);
+		System.out.println("P(ClassB): " + probabilityClass1);
 	}
 	
 	public static void main(String[] args){
