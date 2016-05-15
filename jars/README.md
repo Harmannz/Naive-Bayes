@@ -8,5 +8,6 @@ To execute the runnable jar, perform following command in terminal.
 Using the supplied example files:
 > `java -jar runnable.jar ../resources/spamLabelled.dat ../resources/spamUnlabelled.dat`
 
+#### Note: if no arguments are supplied, the program will resort to the default files in resources
 ## 2. Source Jar
 Import the source jar file into your change/inspect the code.
