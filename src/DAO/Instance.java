@@ -2,8 +2,6 @@ package DAO;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.sun.org.apache.bcel.internal.classfile.Attribute;
 /**
  * Represents an instance from the data set.
  * The classLabel is -1 if the data set is unlabelled (i.e. if data is for testing).
