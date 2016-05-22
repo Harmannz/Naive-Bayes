@@ -1,0 +1,117 @@
+$ java -jar runnable.jar ../resources/spamLabelled.dat ../resources/spamUnlabelled.dat
+Reading data from file: ../resources/spamLabelled.dat
+Read 200 instances
+Reading data from file: ../resources/spamUnlabelled.dat
+Read 10 instances
+####################
+# Occurrence Table #
+####################
+Feature: [Not Spam, Spam]
+F1=false: [97, 18]
+F1=true : [54, 35]
+F2=false: [64, 22]
+F2=true : [87, 31]
+F3=false: [99, 29]
+F3=true : [52, 24]
+F4=false: [91, 21]
+F4=true : [60, 32]
+F5=false: [100, 27]
+F5=true : [51, 26]
+F6=false: [80, 34]
+F6=true : [71, 19]
+F7=false: [75, 12]
+F7=true : [76, 41]
+F8=false: [98, 13]
+F8=true : [53, 40]
+F9=false: [114, 35]
+F9=true : [37, 18]
+F10=false: [107, 18]
+F10=true : [44, 35]
+F11=false: [63, 18]
+F11=true : [88, 35]
+F12=false: [100, 12]
+F12=true : [51, 41]
+#################################
+# Naive Bayes Probability Table #
+#################################
+Feature: [Not Spam, Spam]
+F1=false: [0.6423841059602649, 0.33962264150943394]
+F1=true : [0.3576158940397351, 0.660377358490566]
+F2=false: [0.423841059602649, 0.41509433962264153]
+F2=true : [0.5761589403973509, 0.5849056603773585]
+F3=false: [0.6556291390728477, 0.5471698113207547]
+F3=true : [0.3443708609271523, 0.4528301886792453]
+F4=false: [0.6026490066225165, 0.39622641509433965]
+F4=true : [0.3973509933774834, 0.6037735849056604]
+F5=false: [0.6622516556291391, 0.5094339622641509]
+F5=true : [0.33774834437086093, 0.49056603773584906]
+F6=false: [0.5298013245033113, 0.6415094339622641]
+F6=true : [0.47019867549668876, 0.3584905660377358]
+F7=false: [0.4966887417218543, 0.22641509433962265]
+F7=true : [0.5033112582781457, 0.7735849056603774]
+F8=false: [0.6490066225165563, 0.24528301886792453]
+F8=true : [0.3509933774834437, 0.7547169811320755]
+F9=false: [0.7549668874172185, 0.660377358490566]
+F9=true : [0.24503311258278146, 0.33962264150943394]
+F10=false: [0.7086092715231788, 0.33962264150943394]
+F10=true : [0.2913907284768212, 0.660377358490566]
+F11=false: [0.41721854304635764, 0.33962264150943394]
+F11=true : [0.5827814569536424, 0.660377358490566]
+F12=false: [0.6622516556291391, 0.22641509433962265]
+F12=true : [0.33774834437086093, 0.7735849056603774]
+
+P(Not Spam): 0.7425742574257426
+P(Spam): 0.25742574257425743
+
+#############################
+# Performing Classification #
+#############################
+Test Instance: 1
+P(Not Spam): 4.5745793354799594E-4
+P(Spam): 3.6310682971325263E-6
+Prediction: NOT SPAM
+
+Test Instance: 2
+P(Not Spam): 4.1956427373119854E-5
+P(Spam): 5.73701316149022E-5
+Prediction: SPAM
+
+Test Instance: 3
+P(Not Spam): 1.2886216893902397E-4
+P(Spam): 1.8599635002963176E-4
+Prediction: SPAM
+
+Test Instance: 4
+P(Not Spam): 5.970900059679335E-4
+P(Spam): 6.097638620708581E-6
+Prediction: NOT SPAM
+
+Test Instance: 5
+P(Not Spam): 9.257237491670748E-5
+P(Spam): 6.142744481444356E-5
+Prediction: NOT SPAM
+
+Test Instance: 6
+P(Not Spam): 4.6409871775721404E-5
+P(Spam): 5.915235426576045E-5
+Prediction: SPAM
+
+Test Instance: 7
+P(Not Spam): 3.269186174049223E-4
+P(Spam): 4.077711579339186E-6
+Prediction: NOT SPAM
+
+Test Instance: 8
+P(Not Spam): 3.9111423607025793E-4
+P(Spam): 6.459074928550027E-5
+Prediction: NOT SPAM
+
+Test Instance: 9
+P(Not Spam): 3.793605908017997E-5
+P(Spam): 1.8599635002963176E-4
+Prediction: SPAM
+
+Test Instance: 10
+P(Not Spam): 6.775992308249818E-4
+P(Spam): 2.2559891786918056E-5
+Prediction: NOT SPAM
