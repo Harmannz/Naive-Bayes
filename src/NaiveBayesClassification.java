@@ -35,8 +35,9 @@ public class NaiveBayesClassification {
 		int i = 1;
 		Util.emphasise("Performing Classification");
 		for(Instance instance : testSet){
+			System.out.printf("Test Instance: %d\n", i);
 			int prediction = nbClassifier.classify(instance.getAttributes());
-			System.out.printf("Test Instance: %d. Prediction: %s\n", i, Util.getClassString(prediction));
+			System.out.printf("Prediction: %s\n\n", Util.getClassString(prediction));
 			i++;
 		}
 	}

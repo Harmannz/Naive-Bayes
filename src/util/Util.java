@@ -55,9 +55,6 @@ public class Util {
 			throw new RuntimeException("File not found: " + filename);
 		}
 		
-		for(int i = 0; i < data.size(); i++){
-			System.out.println(data.get(i));
-		}
 		return data;
 	}
     

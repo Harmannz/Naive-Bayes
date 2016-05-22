@@ -60,6 +60,8 @@ public class NaiveBayesClassifier {
 		}
 		scoreClassA *= probabilityClass0;
 		scoreClassB *= probabilityClass1;
+		System.out.println("P(Not Spam): " + scoreClassA);
+		System.out.println("P(Spam): " + scoreClassB);
 		if (scoreClassA >= scoreClassB){
 			return Util.NOT_SPAM;
 		}else{
@@ -83,9 +85,16 @@ public class NaiveBayesClassifier {
 			}
 		}
 		Util.emphasise("Occurrence Table");
+		System.out.format("%s:%17s\n", "Feature", "[Not Spam, Spam]");
 		for(Map.Entry<Integer, int[]> entry : occurrenceTable.entrySet()){
-			System.out.println(entry.getKey() + ": " + Arrays.toString(entry.getValue()));
+			System.out.println(printFeature(entry.getKey()) + ": " + Arrays.toString(entry.getValue()));
 		}
+	}
+	
+	private String printFeature(int key){
+		int feature = key / 2 + 1;
+		String value = (key % 2) == 1 ? "=true " : "=false";
+		return "F" + feature + value;
 	}
 	
 	/**
@@ -115,11 +124,12 @@ public class NaiveBayesClassifier {
 		probabilityClass1 = ((double)(class1+1))/(class0+class1+2);
 		//print statements for test
 		Util.emphasise("Naive Bayes Probability Table");
+		System.out.format("%s:%17s\n", "Feature", "[Not Spam, Spam]");
 		for(Map.Entry<Integer, double[]> entry : probabilityTable.entrySet()){
-			System.out.println(entry.getKey() + ": " + Arrays.toString(entry.getValue()));
+			System.out.println(printFeature(entry.getKey()) + ": " + Arrays.toString(entry.getValue()));
 		}
-		System.out.println("P(ClassA): " + probabilityClass0);
-		System.out.println("P(ClassB): " + probabilityClass1);
+		System.out.println("\nP(Not Spam): " + probabilityClass0);
+		System.out.println("P(Spam): " + probabilityClass1 + "\n");
 	}
 	
 	public static void main(String[] args){
